@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "simple-debian-package"
+version = "0.1.0"
+description = ""
+authors = ["Will Harper <will.harper@monoper.io>"]
+readme = "README.md"
+packages = [{include = "simple_debian_package", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.93.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
